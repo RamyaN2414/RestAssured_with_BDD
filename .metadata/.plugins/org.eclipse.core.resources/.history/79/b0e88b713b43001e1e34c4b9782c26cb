@@ -1,0 +1,23 @@
+package api.StepDefination;
+
+import static io.restassured.RestAssured.*;
+import static io.restassured.matcher.RestAssuredMatchers.*;
+import static org.hamcrest.Matchers.*;
+
+import org.testng.annotations.Test;
+
+import api.payload.User;
+import net.datafaker.Faker;
+
+public class User_test_Stepdefination {
+
+	User userPauload;
+	int ids;
+	Faker faker = new Faker();
+
+	// FakerData fd=new FakerData();
+	@Test(priority = 1)
+	public void Api_with_post_Request() {
+
+	}
+}

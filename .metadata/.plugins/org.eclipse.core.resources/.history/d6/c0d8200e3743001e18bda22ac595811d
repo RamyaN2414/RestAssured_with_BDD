@@ -1,0 +1,20 @@
+package api.UserEndpoints;
+import io.restassured.RestAssured.*;
+import io.restassured.matcher.RestAssuredMatchers.*;
+import org.hamcrest.Matchers.*;
+import io.restassured.http.ContentType;
+import io.restassured.response.Response;
+
+public class UserEndPoints {
+	public static Response crerateUser(user userPayload) {
+		Response response=given()
+				.contentType(ContentType.JSON)
+				.accept(ContentType.JSON)
+				.body(userpayload)
+				.when()
+				.post(Routes.post_url);
+		return response;
+		
+	}
+
+}

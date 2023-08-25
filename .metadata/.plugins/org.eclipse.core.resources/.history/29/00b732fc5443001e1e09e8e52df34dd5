@@ -1,0 +1,36 @@
+package api.Utilities;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+import api.payload.User;
+import net.datafaker.Faker;
+
+public class FakerData {
+	Faker faker=new Faker();
+	public User fakerDataGenerator() {
+		User userPayload=new User();
+		userPayload.setName(faker.name().name());
+		List<String> randomlist=new ArrayList<String>();
+		randomlist.add("male");
+		randomlist.add("female");
+		int index= getRandomElement(randomlist);
+		String gender=randomlist.get(index);
+		userPayload.setGender(gender);
+		userPayload.setEmail(faker.internet().emailAddress());
+		List<String> randomlist1=new ArrayList<String>();
+		randomlist1.add("Active");
+		randomlist1.add("Inactive");
+		int index1= getRandomElement(randomlist1);
+		String status=randomlist.get(index1);
+		userPayload.setStatus(status);
+		return userPayload;
+	}
+	private int getRandomElement(List<String> list) {
+		// TODO Auto-generated method stub
+		Random rand=new Random();
+		return rand.nextInt(list.size());
+	}
+
+}

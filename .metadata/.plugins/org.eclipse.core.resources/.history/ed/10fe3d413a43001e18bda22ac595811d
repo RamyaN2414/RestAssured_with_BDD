@@ -1,0 +1,19 @@
+import org.testng.annotations.Test;
+
+import io.restassured.http.ContentType;
+
+import static io.restassured.RestAssured.*;
+import static io.restassured.matcher.RestAssuredMatchers.*;
+import static org.hamcrest.Matchers.*;
+public class demo {
+@Test()
+public  void test() {
+	given()
+	.contentType(ContentType.JSON)
+	.when()
+	.get("http://localhost:3000/user")
+	.then()
+	.statusCode(200)
+	.log().all();
+}
+}

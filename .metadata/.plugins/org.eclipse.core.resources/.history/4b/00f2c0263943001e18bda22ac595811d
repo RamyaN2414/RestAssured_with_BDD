@@ -1,0 +1,10 @@
+package api.StepDefination;
+import static io.restassured.RestAssured.*;
+import static io.restassured.matcher.RestAssuredMatchers.*;
+import static org.hamcrest.Matchers.*;
+import api.payload.User;
+
+public class User_test_Stepdefination {
+
+	User userPauload;
+}

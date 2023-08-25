@@ -1,0 +1,59 @@
+package api.StepDefination;
+
+import static io.restassured.RestAssured.*;
+import static io.restassured.matcher.RestAssuredMatchers.*;
+import static org.hamcrest.Matchers.*;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import api.UserEndpoints.UserEndPoints;
+import api.Utilities.FakerData;
+import api.payload.User;
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
+import net.datafaker.Faker;
+
+public class User_test_Stepdefination {
+
+	User userPayload;
+	int ids;
+	Faker faker = new Faker();
+
+	FakerData fd = new FakerData();
+
+	@Test(priority = 1)
+	public void Api_using_post_Request() {
+		userPayload = new User();
+		userPayload = fd.fakerDataGenerator();
+		Response response=UserEndPoints.crerateUser(userPayload);
+  response.then().log().all();
+  Assert.assertEquals(response.getStatusCode(), 201);
+  //To pass the id from post to other tests we use jsonpath
+  JsonPath jsonpasthEvaluator=response.jsonPath();
+  ids=jsonpasthEvaluator.get("id");
+  
+  
+	}
+	
+	@Test(priority=2)
+	public void Api_using_get_Request() {
+		Response response=UserEndPoints.getUser(ids);
+		  response.then().log().all();
+		  Assert.assertEquals(response.getStatusCode(), 200);
+
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-08-25T20:49:26 IST" name="Suite" finished-at="2023-08-25T20:49:30 IST" duration-ms="4762">
+    <groups>
+    </groups>
+    <test started-at="2023-08-25T20:49:26 IST" name="Test" finished-at="2023-08-25T20:49:30 IST" duration-ms="4762">
+      <class name="api.StepDefination.User_test_Stepdefination">
+        <test-method signature="user_Hit_API_with_Post_Request_method_then_new_resource_created_including_id()[pri:1, instance:api.StepDefination.User_test_Stepdefination@25df00a0]" started-at="2023-08-25T20:49:26 IST" name="user_Hit_API_with_Post_Request_method_then_new_resource_created_including_id" finished-at="2023-08-25T20:49:30 IST" duration-ms="3691" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- user_Hit_API_with_Post_Request_method_then_new_resource_created_including_id -->
+        <test-method signature="use_Hit_with_Get_Request_method_to_retrive_retrive_resource_through_previously_generated_id()[pri:2, instance:api.StepDefination.User_test_Stepdefination@25df00a0]" started-at="2023-08-25T20:49:30 IST" name="use_Hit_with_Get_Request_method_to_retrive_retrive_resource_through_previously_generated_id" finished-at="2023-08-25T20:49:30 IST" duration-ms="191" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- use_Hit_with_Get_Request_method_to_retrive_retrive_resource_through_previously_generated_id -->
+        <test-method signature="use_Hit_Api_with_Put_method_to_modify_resource_through_same_generated_id()[pri:3, instance:api.StepDefination.User_test_Stepdefination@25df00a0]" started-at="2023-08-25T20:49:30 IST" name="use_Hit_Api_with_Put_method_to_modify_resource_through_same_generated_id" finished-at="2023-08-25T20:49:30 IST" duration-ms="251" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- use_Hit_Api_with_Put_method_to_modify_resource_through_same_generated_id -->
+        <test-method signature="user_Hit_Api_with_Delete_method_to_delete_that_record()[pri:4, instance:api.StepDefination.User_test_Stepdefination@25df00a0]" started-at="2023-08-25T20:49:30 IST" name="user_Hit_Api_with_Delete_method_to_delete_that_record" finished-at="2023-08-25T20:49:30 IST" duration-ms="131" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- user_Hit_Api_with_Delete_method_to_delete_that_record -->
+      </class> <!-- api.StepDefination.User_test_Stepdefination -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
